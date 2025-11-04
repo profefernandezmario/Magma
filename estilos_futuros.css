@@ -1,0 +1,149 @@
+body {
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+}
+
+.articulo {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.articulo:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.iconos {
+  animation: iconoAnimado 1s infinite;
+}
+
+@keyframes iconoAnimado {
+  from {
+    transform: scale(0.3);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: small;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .articulo {
+    width: 100%;
+  }
+}
+
+/* ANIMACIONES SUGERIDAS */
+
+/* Zoom suave al pasar el mouse sobre imágenes */
+.articulo {
+  transition: transform 0.3s ease;
+}
+
+.articulo:hover {
+  transform: scale(1.05);
+}
+
+/* Aparición suave de tarjetas */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.6s ease forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rebote en botones al pasar el mouse */
+.btn-outline-success:hover {
+  animation: rebote 0.4s ease;
+}
+
+@keyframes rebote {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Fondo animado en el encabezado */
+header {
+  background: linear-gradient(-45deg, #ff9800, #f44336, #2196f3, #4caf50);
+  background-size: 400% 400%;
+  animation: fondoAnimado 10s ease infinite;
+}
+
+@keyframes fondoAnimado {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Latido en íconos */
+.icono:hover {
+  animation: latido 1s infinite;
+}
+
+@keyframes latido {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Fade-in para secciones al cargar */
+section {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

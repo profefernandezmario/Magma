@@ -1,0 +1,216 @@
+:root {
+  --primary-color: #0d6efd;
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --header-bg-light: #f8f9fa;
+  --header-bg-dark: #212529;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.custom-header {
+  background: linear-gradient(
+    90deg,
+    #cb790e 0%,
+    #23a5d4 35%,
+    #f4103a 70%,
+    #0d0c0e 100%
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.header-top {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px 0;
+}
+
+.header-bottom {
+  background-color: rgba(33, 37, 41, 0.95);
+  padding: 8px 0;
+}
+
+.store-name {
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.logo-container img {
+  max-height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 0;
+  margin: 0 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.contact-btn i {
+  margin-right: 6px;
+  font-size: 1.1rem;
+}
+
+.btn-instagram {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #3448c5,
+    #4a43c0,
+    #7329a0,
+    #b02a75,
+    #c2275d,
+    #d61a1a
+  );
+}
+
+.btn-whatsapp {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(45deg, #20bd5a, #0f796b);
+}
+
+.btn-payment {
+  background: linear-gradient(45deg, #17a2b8, #6f42c1);
+}
+
+.btn-payment:hover {
+  background: linear-gradient(45deg, #148ea1, #6139ad);
+}
+
+.cart-btn {
+  background: linear-gradient(45deg, #0d6efd, #6610f2);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, #0b5ed7, #5a0fd9);
+}
+
+.badge-cart {
+  background-color: #dc3545;
+  font-size: 0.7rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.demo-content {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.feature-list li:before {
+  content: "✓";
+  color: #198754;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .contact-btn i {
+    font-size: 1rem;
+    margin-right: 4px;
+  }
+
+  .store-name {
+    font-size: 1.1rem;
+  }
+
+  body {
+    padding-top: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .buttons-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-btn {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 8px;
+  }
+
+  body {
+    padding-top: 180px;
+  }
+}
