@@ -163,6 +163,23 @@ body {
   width: 100%;
 }
 
+.botonAgregarAlCarrito {
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonAgregarAlCarrito:hover {
+  background-color: #07c069;
+  box-shadow: 10px 10px 12px rgba(25, 135, 84, 0.616);
+}
+
 .demo-content {
   background: white;
   border-radius: 10px;
