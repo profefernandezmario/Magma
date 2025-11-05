@@ -1,3 +1,4 @@
+<!-- index previo a la modificacion del carrito de compras -->
 <!DOCTYPE html>
 <html lang="es-AR">
 
@@ -85,16 +86,15 @@
 						</div>
 					</div>
 
-					<!-- Carrito revisado -->
+					<!-- Carrito -->
 					<div class="col-lg-2 col-md-3 col-4 text-end">
 						<button class="cart-btn position-relative">
 							<i class="bi bi-cart3"></i>
 							<span class="d-none d-md-inline"> Carrito</span>
-							<span id="carrito-contador"
-								class="position-absolute top-0 start-100 translate-middle badge badge-cart rounded-pill">0</span>
+							<span
+								class="position-absolute top-0 start-100 translate-middle badge badge-cart rounded-pill">3</span>
 						</button>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -1573,31 +1573,19 @@
 
 			<!-- boton actual de pedido al WS -->
 			<!-- From Uiverse.io by adamgiebl -->
-
-			<!-- agrupo botones enviar y vacias -->
-			<div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-3">
-				<!-- boton actual de pedido al WS -->
-				<!-- From Uiverse.io by adamgiebl -->
-				<button class="buttonCarrito">
-					<div class="svg-wrapper-1">
-						<div class="svg-wrapper">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-								<path fill="none" d="M0 0h24v24H0z"></path>
-								<path fill="currentColor"
-									d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-								</path>
-							</svg>
-						</div>
+			<button class="buttonCarrito ms-5">
+				<div class="svg-wrapper-1">
+					<div class="svg-wrapper">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z"></path>
+							<path fill="currentColor"
+								d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+							</path>
+						</svg>
 					</div>
-					<span>Enviar Pedido</span>
-				</button>
-
-				<!-- Botón Vaciar Carrito -->
-				<button onclick="vaciarCarrito()" class="btn btn-danger">
-					<i class="bi bi-trash"></i> Vaciar Carrito
-				</button>
-			</div>
-
+				</div>
+				<span>Enviar Pedido</span>
+			</button>
 
 		</div>
 	</main>
@@ -1704,9 +1692,9 @@
 
 				<!-- <script src="carrito.js"></script> -->
 				<!-- <script src="script-mejorado.js"></script> -->
-
+				 
 				<!-- nuevo carrito de compras -->
-				<script src="carritoDeCompras.js"></script>
+				 <script src="carritoDeCompras.js"></script>
 </body>
 
 </html>

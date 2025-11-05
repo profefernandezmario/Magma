@@ -239,3 +239,121 @@ body {
     padding-top: 180px;
   }
 }
+
+/* Estilos mejorados para el carrito */
+#lista-carrito {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.compras {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+.compras button {
+  margin: 5px;
+}
+
+/* Mejorar visualización de items del carrito */
+#lista-carrito .list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 15px 10px;
+}
+
+#lista-carrito .list-group-item:last-child {
+  border-bottom: none;
+  background-color: #f8f9fa;
+}
+
+/* Estilos para los botones del carrito */
+.botones-carrito-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Ajustar el botón de enviar para que sea más consistente */
+.buttonCarrito {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  height: 48px; /* Misma altura que el botón de vaciar */
+}
+
+.buttonCarrito span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonCarrito svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buttonCarrito:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.buttonCarrito:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.buttonCarrito:hover span {
+  transform: translateX(8em);
+}
+
+.buttonCarrito:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+/* Botón vaciar carrito */
+.btn-vaciar {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .botones-carrito-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .buttonCarrito, .btn-vaciar {
+    width: 100%;
+    justify-content: center;
+  }
+}
