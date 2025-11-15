@@ -577,3 +577,88 @@ body {
     justify-content: center;
   }
 }
+
+/* AJUSTES DEL HEADER PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+  .custom-header {
+    padding: 0;
+  }
+  
+  .header-top {
+    padding: 5px 0 !important;
+  }
+  
+  .logo-container img {
+    max-height: 40px !important;
+  }
+  
+  body {
+    padding-top: 100px !important;
+  }
+  
+  .store-name {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+  }
+  
+  .header-top {
+    padding: 4px 0 !important;
+  }
+  
+  .logo-container img {
+    max-height: 35px !important;
+  }
+  
+  body {
+    padding-top: 90px !important;
+  }
+  
+  .store-name {
+    font-size: 1rem !important;
+    text-align: center;
+  }
+  
+  /* Ajustar contenedor principal para evitar desbordamiento */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-top {
+    padding: 3px 0 !important;
+  }
+  
+  .logo-container img {
+    max-height: 30px !important;
+  }
+  
+  body {
+    padding-top: 80px !important;
+  }
+  
+  .buttons-container {
+    gap: 2px;
+  }
+  
+  .contact-btn {
+    padding: 4px 6px !important;
+    font-size: 0.65rem !important;
+    min-height: 32px;
+  }
+  
+  .cart-btn {
+    padding: 5px 8px !important;
+    font-size: 0.7rem !important;
+  }
+}
