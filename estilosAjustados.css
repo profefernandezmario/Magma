@@ -578,65 +578,83 @@ body {
   }
 }
 
-/* AJUSTES DEL HEADER PARA PANTALLAS PEQUEÑAS */
+/* HEADER COMPLETAMENTE REDISEÑADO PARA MÓVILES */
 @media (max-width: 768px) {
   .custom-header {
-    padding: 0;
+    height: 70px !important;
+    min-height: 70px !important;
+    background: linear-gradient(90deg, #cb790e 0%, #23a5d4 50%, #f4103a 100%) !important;
   }
   
   .header-top {
-    padding: 5px 0 !important;
+    padding: 2px 0 !important;
+    height: 70px !important;
   }
   
   .logo-container img {
-    max-height: 40px !important;
+    max-height: 35px !important;
+    width: auto !important;
   }
   
   body {
-    padding-top: 100px !important;
+    padding-top: 70px !important;
   }
   
-  .store-name {
-    font-size: 1.1rem !important;
+  /* CONTENEDOR PRINCIPAL MÁS COMPACTO */
+  .container {
+    max-width: 100% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  /* BOTONES MUCHO MÁS PEQUEÑOS */
+  .buttons-container {
+    gap: 3px !important;
+    margin: 2px 0 !important;
+  }
+  
+  .contact-btn {
+    padding: 4px 6px !important;
+    font-size: 0.65rem !important;
+    min-height: 28px !important;
+    border-radius: 5px !important;
+  }
+  
+  .contact-btn i {
+    font-size: 0.7rem !important;
+    margin-right: 2px !important;
+  }
+  
+  .cart-btn {
+    padding: 4px 8px !important;
+    font-size: 0.7rem !important;
+    min-height: 28px !important;
+    border-radius: 5px !important;
+  }
+  
+  /* OCULTAR TEXTO EN BOTONES PARA AHORRAR ESPACIO */
+  .contact-btn span {
+    display: none !important;
+  }
+  
+  .btn-payment span {
+    display: none !important;
+  }
+  
+  .cart-btn span {
+    display: none !important;
   }
 }
 
 @media (max-width: 576px) {
   .custom-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1030;
+    height: 60px !important;
+    min-height: 60px !important;
   }
   
   .header-top {
-    padding: 4px 0 !important;
-  }
-  
-  .logo-container img {
-    max-height: 35px !important;
-  }
-  
-  body {
-    padding-top: 90px !important;
-  }
-  
-  .store-name {
-    font-size: 1rem !important;
-    text-align: center;
-  }
-  
-  /* Ajustar contenedor principal para evitar desbordamiento */
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .header-top {
-    padding: 3px 0 !important;
+    padding: 1px 0 !important;
+    height: 60px !important;
   }
   
   .logo-container img {
@@ -644,21 +662,63 @@ body {
   }
   
   body {
-    padding-top: 80px !important;
+    padding-top: 60px !important;
   }
   
   .buttons-container {
-    gap: 2px;
+    gap: 2px !important;
   }
   
   .contact-btn {
-    padding: 4px 6px !important;
-    font-size: 0.65rem !important;
-    min-height: 32px;
+    padding: 3px 5px !important;
+    font-size: 0.6rem !important;
+    min-height: 26px !important;
   }
   
   .cart-btn {
-    padding: 5px 8px !important;
-    font-size: 0.7rem !important;
+    padding: 3px 6px !important;
+    font-size: 0.65rem !important;
+    min-height: 26px !important;
+  }
+  
+  /* CONTADOR DEL CARRITO MÁS PEQUEÑO */
+  .badge-cart {
+    font-size: 0.5rem !important;
+    padding: 2px 4px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .custom-header {
+    height: 55px !important;
+    min-height: 55px !important;
+  }
+  
+  .header-top {
+    height: 55px !important;
+    padding: 0 !important;
+  }
+  
+  .logo-container img {
+    max-height: 25px !important;
+  }
+  
+  body {
+    padding-top: 55px !important;
+  }
+  
+  /* REDUCIR MÁRGENES INTERNOS */
+  .row.align-items-center {
+    margin: 0 !important;
+  }
+  
+  .col-lg-2, .col-md-3, .col-4 {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  
+  .col-lg-8, .col-md-6, .col-12 {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
   }
 }
