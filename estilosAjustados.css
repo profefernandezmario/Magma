@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --primary-color: #0d6efd;
   --success-color: #198754;
@@ -610,4 +611,486 @@ body {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Añadir al final del archivo estilosAjustados.css */
+
+/* Estilos mejorados para botones en pantallas pequeñas */
+@media (max-width: 768px) {
+  .buttons-container {
+    justify-content: space-between;
+    gap: 5px;
+    margin: 8px 0;
+  }
+
+  .contact-btn {
+    flex: 0 0 auto;
+    font-size: 0;
+    padding: 8px 10px;
+    max-width: 50px;
+    min-width: 50px;
+    justify-content: center;
+  }
+
+  .contact-btn span {
+    display: none !important;
+  }
+
+  .contact-btn i {
+    margin-right: 0;
+    font-size: 1.2rem;
+  }
+
+  .btn-payment {
+    min-width: 50px;
+    max-width: 50px;
+  }
+
+  /* Botón de carrito optimizado para móviles */
+  .cart-btn {
+    width: auto;
+    margin-top: 0;
+    padding: 8px 12px;
+    font-size: 0;
+    min-width: 50px;
+  }
+
+  .cart-btn span {
+    display: none;
+  }
+
+  .badge-cart {
+    font-size: 0.65rem;
+    padding: 4px 6px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .buttons-container {
+    gap: 4px;
+  }
+
+  .contact-btn {
+    flex: 0 0 25%;
+    font-size: 0;
+    padding: 6px 8px;
+    min-height: 40px;
+    max-width: none;
+  }
+
+  .contact-btn i {
+    font-size: 1.1rem;
+  }
+
+  .cart-btn {
+    padding: 6px 10px;
+    min-width: 45px;
+  }
+
+  .badge-cart {
+    font-size: 0.6rem;
+    padding: 3px 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-btn {
+    flex: 0 0 30%;
+    margin-bottom: 0;
+  }
+
+  .cart-btn-container {
+    flex: 0 0 30%;
+    text-align: center;
+  }
+}
+
+/* Estilos para tooltips en móviles */
+.contact-btn {
+  position: relative;
+}
+
+.contact-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+
+.contact-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Para dispositivos táctiles */
+@media (hover: none) {
+  .contact-btn:active::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Añadir al final del archivo estilosAjustados.css */
+
+/* HEADER REORGANIZADO PARA MÓVILES - BOTONES EN FILA, CARRITO DEBAJO */
+@media (max-width: 768px) {
+  .header-top {
+    padding: 8px 0;
+  }
+  
+  .custom-header .container {
+    padding: 0 10px;
+  }
+  
+  /* Reorganización en dos filas independientes */
+  .header-top .row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Primera fila: Logo + Botones de contacto en horizontal */
+  .header-top .row > .col-lg-2,
+  .header-top .row > .col-lg-8 {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  /* Logo más pequeño y alineado a la izquierda */
+  .header-top .row > .col-lg-2 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  
+  .logo-container img {
+    max-height: 40px !important;
+  }
+  
+  /* Botones de contacto en fila horizontal */
+  .header-top .row > .col-lg-8 {
+    order: 2;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .contact-btn {
+    flex: 1;
+    font-size: 0;
+    padding: 10px 5px;
+    min-height: 44px;
+    max-width: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-btn i {
+    font-size: 1.4rem;
+    margin-right: 0;
+  }
+  
+  .contact-btn span {
+    display: none !important;
+  }
+  
+  /* Segunda fila: Carrito ocupa todo el ancho */
+  .header-top .row > .col-lg-2 {
+    width: 100%;
+    order: 3;
+    margin-top: 5px;
+  }
+  
+  .cart-btn-container {
+    width: 100%;
+  }
+  
+  .cart-btn {
+    width: 100%;
+    margin: 0;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cart-btn i {
+    font-size: 1.3rem;
+    margin-right: 8px;
+  }
+  
+  .cart-btn span {
+    display: inline !important;
+  }
+  
+  .badge-cart {
+    font-size: 0.75rem;
+    padding: 5px 7px;
+    top: -8px;
+    right: -8px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 140px;
+  }
+  
+  .header-top {
+    padding: 6px 0;
+  }
+  
+  .logo-container img {
+    max-height: 35px !important;
+  }
+  
+  .buttons-container {
+    gap: 6px;
+  }
+  
+  .contact-btn {
+    padding: 9px 4px;
+    min-height: 42px;
+  }
+  
+  .contact-btn i {
+    font-size: 1.3rem;
+  }
+  
+  .cart-btn {
+    padding: 11px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .cart-btn i {
+    font-size: 1.2rem;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons-container {
+    gap: 4px;
+  }
+  
+  .contact-btn {
+    padding: 8px 3px;
+    min-height: 40px;
+  }
+  
+  .contact-btn i {
+    font-size: 1.2rem;
+  }
+  
+  .cart-btn {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .cart-btn i {
+    font-size: 1.1rem;
+  }
+}
+
+/* Estilos específicos para pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .contact-btn {
+    padding: 7px 2px;
+    min-height: 38px;
+  }
+  
+  .contact-btn i {
+    font-size: 1.1rem;
+  }
+  
+  .buttons-container {
+    gap: 3px;
+  }
+}
+
+/* Tooltips mejorados */
+.contact-btn, .cart-btn {
+  position: relative;
+}
+
+.contact-btn::after, .cart-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.contact-btn:hover::after, .cart-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .contact-btn:active::after, .cart-btn:active::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Asegurar que el header tenga suficiente padding-top en móviles */
+@media (max-width: 768px) {
+  body {
+    padding-top: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 125px;
+  }
+}
+
+/* ===== SOBREESCRIBIR ESTILOS BOOTSTRAP PARA GRID PERSONALIZADO ===== */
+
+/* En móviles: 2 columnas */
+@media (max-width: 767px) {
+    .row-cols-sm-2 > * {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    
+    .container .row {
+        --bs-gutter-x: 1rem;
+        margin-left: calc(var(--bs-gutter-x) * -.5);
+        margin-right: calc(var(--bs-gutter-x) * -.5);
+    }
+    
+    .container .row > * {
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        margin-bottom: 1rem;
+    }
+}
+
+/* En tablets: 3 columnas */
+@media (min-width: 768px) and (max-width: 991px) {
+    .row-cols-md-3 > * {
+        flex: 0 0 auto;
+        width: 33.333333%;
+    }
+}
+
+/* En desktop: 4 columnas */
+@media (min-width: 992px) {
+    .row-cols-lg-4 > * {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+/* Mejorar las tarjetas existentes */
+.card {
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Asegurar que las secciones tengan buen espaciado */
+section.container {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+    section.container {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ===== SOLUCIÓN GLOBAL SIN MODIFICAR HTML ===== */
+/* Reducir TODAS las imágenes promo.svg automáticamente */
+img[src="media/promo.svg"],
+img[src*="/promo.svg"],
+img[src*="promo.svg"] {
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 75px !important;
+    max-height: 75px !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Específico para las cards de Bootstrap */
+.card img[src="media/promo.svg"],
+.card img[src*="/promo.svg"],
+.card img[src*="promo.svg"] {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 8px auto !important;
+    display: block !important;
+}
+
+/* Ajustar el espaciado alrededor del icono promocional */
+.card-body br + img[src*="promo.svg"] {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+/* Para las nuevas tarjetas con grid personalizado */
+.tarjeta-producto img[src*="promo.svg"] {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 10px auto !important;
+}
+
+li {
+  list-style-type:  none;
 }
