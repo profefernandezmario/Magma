@@ -198,7 +198,7 @@ class CarritoManager {
     }
 
     mostrarAlias() {
-        const alias = 'MF.INDUMENTARIAS';
+        const alias = 'MAGMA.FIT.LEMON';
         if (confirm(`Alias: ${alias}\n\n¿Copiar al portapapeles?`)) {
             navigator.clipboard.writeText(alias).then(() => {
                 this.mostrarFeedback('📋 Alias copiado');
